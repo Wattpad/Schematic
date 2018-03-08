@@ -1,0 +1,6 @@
+framework module Schematic {
+  umbrella header "Schematic-umbrella.h"
+
+  export *
+  module * { export * }
+}

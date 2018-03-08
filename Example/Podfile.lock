@@ -1,0 +1,16 @@
+PODS:
+  - Schematic (0.1.0)
+
+DEPENDENCIES:
+  - Schematic (from `../`)
+
+EXTERNAL SOURCES:
+  Schematic:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Schematic: 459bd4e1118d719130390f33cfe24ed9841cf04d
+
+PODFILE CHECKSUM: 6d2855614aa9e0ce25c4588e8621965b7906aef4
+
+COCOAPODS: 1.2.0

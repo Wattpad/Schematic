@@ -9,16 +9,14 @@
 import UIKit
 
 class ViewController: UIViewController {
+    // MARK: View Setup
+    override func loadView() {
+        view = ExampleView()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        navigationItem.title = "Breakdown"
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
 }
 

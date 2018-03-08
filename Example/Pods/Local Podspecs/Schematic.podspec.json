@@ -1,0 +1,22 @@
+{
+  "name": "Schematic",
+  "version": "0.1.0",
+  "summary": "A short description of Schematic.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/alexjfigueroa@gmail.com/Schematic",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "alexjfigueroa@gmail.com": "alexjfigueroa@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/alexjfigueroa@gmail.com/Schematic.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": "Schematic/Classes/**/*"
+}
