@@ -5,7 +5,7 @@
 [![License](https://img.shields.io/cocoapods/l/Schematic.svg?style=flat)](http://cocoapods.org/pods/Schematic)
 [![Platform](https://img.shields.io/cocoapods/p/Schematic.svg?style=flat)](http://cocoapods.org/pods/Schematic)
 
-**A lightweight micro-framework to lay out views declaratively.**
+**A declarative Swift micro-framework for view layouts**
 
 The name was chosen because an electrical schematic shows the connections of a circuit. Since we're named after an electrical unit of power it only seemed fitting we tried to fit that theme.
 
