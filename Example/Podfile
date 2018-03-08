@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'Schematic_Example' do
+  pod 'Schematic', :path => '../'
+
+  target 'Schematic_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
