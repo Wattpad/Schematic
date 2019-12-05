@@ -11,7 +11,7 @@ import Foundation
 public extension Anchorable {
     /// Applies constraints to the given Anchorable.
     /// Note: This will disable translatesAutoresizingMaskIntoConstraints for views.
-    public func applyLayout(_ constraints: [Constraint]) {
+    func applyLayout(_ constraints: [Constraint]) {
         guard !constraints.isEmpty else {
             return
         }
@@ -32,7 +32,7 @@ public extension Anchorable {
 
     /// Applies a single Constraint to the given Anchorable and returns the constraints it makes.
     /// Note: This will disable translatesAutoresizingMaskIntoConstraints for views.
-    public func applyLayout(_ constraint: Constraint) -> NSLayoutConstraint {
+    func applyLayout(_ constraint: Constraint) -> NSLayoutConstraint {
         if let view = self as? UIView, view.translatesAutoresizingMaskIntoConstraints {
             view.translatesAutoresizingMaskIntoConstraints = false
         }
