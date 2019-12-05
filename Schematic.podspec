@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Schematic'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of Schematic.'
+  s.version          = '1.0.0'
+  s.summary          = 'A declarative Swift micro-framework for view layouts'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,25 +18,32 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+  In summary, we wanted to go from this:
+  ```swift
+  NSLayoutConstraint.activate([
+      a.leadingAnchor.constraint(equalTo: parentView.leadingAnchor, constant: 10.0),
+      a.trailingAnchor.constraint(equalTo: parentView.trailingAnchor, constant: -10.0),
+      a.topAnchor.constraint(equalTo: parentView.topAnchor, constant: 10.0),
+      a.bottomAnchor.constraint(equalTo: parentView.bottomAnchor, constant: -10.0)
+  ])
+  ```
+  
+  and go to something like this:
+  ```swift
+  a.applyLayout([
+      .alignToEdges(of: parentView)
+  ])
+  ```
                        DESC
 
-  s.homepage         = 'https://github.com/alexjfigueroa@gmail.com/Schematic'
+  s.homepage         = 'https://github.com/Wattpad/Schematic'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'alexjfigueroa@gmail.com' => 'alexjfigueroa@gmail.com' }
-  s.source           = { :git => 'https://github.com/alexjfigueroa@gmail.com/Schematic.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.source           = { :git => 'https://github.com/Wattpad/Schematic.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '9.0'
 
   s.source_files = 'Schematic/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'Schematic' => ['Schematic/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end

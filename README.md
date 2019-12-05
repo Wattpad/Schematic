@@ -12,7 +12,7 @@ The name was chosen because an electrical schematic shows the connections of a c
 ## Rationale
 
 Take a look at this write up for an explanation of how this framework came to be:
-- [Building a Micro-Framework for Constraints](https://github.com/Wattpad/ios/wiki/%5BRetro%5D-Breakdown:-Building-a-Micro-Framework-for-Constraints)
+- [Building a Micro-Framework for Constraints](https://github.com/Wattpad/Schematic/wiki/Explanation-for-how-this-framework-came-to-be)
 
 In summary, I wanted to go from this:
 ```swift
@@ -31,16 +31,13 @@ a.applyLayout([
 ])
 ```
 
-The original PR can be found here as well: https://github.com/Wattpad/ios/pull/9896.
 The major change is that now instead of using the Composite pattern and having to build so many arrays, we just have one simple class that acts as a Linked List node to avoid array creation overhead. This makes for a simpler application of constraints.
 
 ## Vision
 
-The next steps to help evolve this framework are to acheive the following goals:
-1. Approval from other iOS engineers on the technical design of this framework
-2. Implementation into the production app
-3. Assessment of readability and performance
-4. Open source if deemed worthy!
+Wattpad iOS developers are actively using this in our app.
+
+Now that this is open sourced, we want everyone to contribute additional features to it so that it stays with a clean interface while being more powerful.
 
 ## Usage
 
