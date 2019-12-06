@@ -1,5 +1,5 @@
 PODS:
-  - Schematic (0.1.0)
+  - Schematic (1.0.0)
 
 DEPENDENCIES:
   - Schematic (from `../`)
@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Schematic: 459bd4e1118d719130390f33cfe24ed9841cf04d
+  Schematic: 33f58b7b6ec267d0a238c0fa78e1c371c42d9cb2
 
 PODFILE CHECKSUM: 6d2855614aa9e0ce25c4588e8621965b7906aef4
 
-COCOAPODS: 1.2.0
+COCOAPODS: 1.7.5
