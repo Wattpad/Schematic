@@ -89,8 +89,6 @@ let constraint = usernameLabel.applyLayout(
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-## Requirements
-
 ## Installation
 
 Schematic is available through [CocoaPods](http://cocoapods.org). To install
@@ -99,10 +97,6 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod 'Schematic'
 ```
-
-## Author
-
-Alexander Figueroa, alexjfigueroa@gmail.com
 
 ## License
 
