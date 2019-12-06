@@ -1,6 +1,6 @@
 # Schematic
 
-[![CI Status](http://img.shields.io/travis/Wattpad/Schematic.svg?style=flat)](https://travis-ci.com/Wattpad/Schematic/)
+[![CI Status](https://travis-ci.com/Wattpad/Schematic.svg?branch=master)](https://travis-ci.com/Wattpad/Schematic/)
 [![Version](https://img.shields.io/cocoapods/v/Schematic.svg?style=flat)](http://cocoapods.org/pods/Schematic)
 [![License](https://img.shields.io/cocoapods/l/Schematic.svg?style=flat)](http://cocoapods.org/pods/Schematic)
 [![Platform](https://img.shields.io/cocoapods/p/Schematic.svg?style=flat)](http://cocoapods.org/pods/Schematic)
