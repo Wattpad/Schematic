@@ -1,9 +1,8 @@
 //
 //  ExampleView.swift
-//  Schematic_Example
+//  Schematic
 //
-//  Created by Alex Figueroa on 2018-03-08.
-//  Copyright © 2018 CocoaPods. All rights reserved.
+//  Copyright © 2019 WP Technology Inc. All rights reserved.
 //
 
 import Foundation

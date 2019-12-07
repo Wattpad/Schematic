@@ -2,8 +2,7 @@
 //  AppDelegate.swift
 //  Schematic
 //
-//  Created by alexjfigueroa@gmail.com on 03/08/2018.
-//  Copyright (c) 2018 alexjfigueroa@gmail.com. All rights reserved.
+//  Copyright © 2019 WP Technology Inc. All rights reserved.
 //
 
 import UIKit

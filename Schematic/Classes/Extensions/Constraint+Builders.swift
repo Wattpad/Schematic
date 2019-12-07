@@ -1,9 +1,8 @@
 //
 //  Constraint+Builders.swift
-//  Pods
+//  Schematic
 //
-//  Created by Alex Figueroa on 2017-10-06.
-//
+//  Copyright © 2019 WP Technology Inc. All rights reserved.
 //
 
 import Foundation
