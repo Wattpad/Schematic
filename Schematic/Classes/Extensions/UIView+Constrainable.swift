@@ -2,8 +2,7 @@
 //  UIView+Constrainable.swift
 //  Pods
 //
-//  Created by Alex Figueroa on 2017-09-14.
-//
+//  Copyright © 2019 WP Technology Inc. All rights reserved.
 //
 
 import Foundation

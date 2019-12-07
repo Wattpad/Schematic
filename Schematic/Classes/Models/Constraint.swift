@@ -1,8 +1,8 @@
 //
 //  Constraint.swift
-//  Breakdown
+//  Schematic
 //
-//  Created by Alex Figueroa on 2018-03-04.
+//  Copyright © 2019 WP Technology Inc. All rights reserved.
 //
 
 import Foundation
