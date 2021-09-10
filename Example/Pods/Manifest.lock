@@ -21,7 +21,7 @@ DEPENDENCIES:
   - Schematic (from `../`)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - FBSnapshotTestCase
     - Nimble
     - Nimble-Snapshots
@@ -36,8 +36,8 @@ SPEC CHECKSUMS:
   Nimble: 051e3d8912d40138fa5591c78594f95fb172af37
   Nimble-Snapshots: f5459b5b091678dc942d03ec4741cacb58ba4a52
   Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
-  Schematic: 33f58b7b6ec267d0a238c0fa78e1c371c42d9cb2
+  Schematic: 0e6cc3825e60758678f5aef9ea15a13903254f45
 
-PODFILE CHECKSUM: 7dc070a9b0a13fd4641b98ea924627923d0e5b0f
+PODFILE CHECKSUM: 1d60b5ee94cf34dbfa16270dddb2048dd425fc68
 
-COCOAPODS: 1.7.5
+COCOAPODS: 1.10.1
