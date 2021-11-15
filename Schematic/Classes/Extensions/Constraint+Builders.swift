@@ -123,6 +123,16 @@ public extension Constraint {
     static func alignTop(to axis: AxisY, of other: Anchor, withOffset offset: CGFloat = 0.0) -> Constraint {
         return align(.top, to: axis, ofView: other, offset: offset)
     }
+    
+    /// Aligns the top less than or equal to the axis of other with optional offset
+    static func alignTop(lessThanOrEqualTo axis: AxisY, of other: Anchor, withOffset offset: CGFloat = 0.0) -> Constraint {
+        return align(.top, lessThanOrEqualTo: axis, ofView: other, offset: offset)
+    }
+    
+    /// Aligns the top greater than or equal to the axis of other with optional offset
+    static func alignTop(greaterThanOrEqualTo axis: AxisY, of other: Anchor, withOffset offset: CGFloat = 0.0) -> Constraint {
+        return align(.top, greaterThanOrEqualTo: axis, ofView: other, offset: offset)
+    }
 
     /// Matches the bottom to other with optional offset
     static func matchBottomTo(_ other: Anchor, withOffset offset: CGFloat = 0.0) -> Constraint {
@@ -132,6 +142,16 @@ public extension Constraint {
     /// Aligns the bottom to the axis of other with optional offset
     static func alignBottom(to axis: AxisY, of other: Anchor, withOffset offset: CGFloat = 0.0) -> Constraint {
         return align(.bottom, to: axis, ofView: other, offset: offset)
+    }
+    
+    /// Aligns the bottom less than or equal to the axis of other with optional offset
+    static func alignBottom(lessThanOrEqualTo axis: AxisY, of other: Anchor, withOffset offset: CGFloat = 0.0) -> Constraint {
+        return align(.bottom, lessThanOrEqualTo: axis, ofView: other, offset: offset)
+    }
+    
+    /// Aligns the bottom greater than or equal to the axis of other with optional offset
+    static func alignBottom(greaterThanOrEqualTo axis: AxisY, of other: Anchor, withOffset offset: CGFloat = 0.0) -> Constraint {
+        return align(.bottom, greaterThanOrEqualTo: axis, ofView: other, offset: offset)
     }
 
     /// Matches the centerY to other with optional offset
@@ -176,6 +196,16 @@ public extension Constraint {
     static func alignLeading(to axis: AxisX, of other: Anchor, withOffset offset: CGFloat = 0.0) -> Constraint {
         return align(.leading, to: axis, ofView: other, offset: offset)
     }
+    
+    /// Aligns the leading less than or equal to the axis of other with optional offset
+    static func alignLeading(lessThanOrEqualTo axis: AxisX, of other: Anchor, withOffset offset: CGFloat = 0.0) -> Constraint {
+        return align(.leading, lessThanOrEqualTo: axis, ofView: other, offset: offset)
+    }
+    
+    /// Aligns the leading greater than or equal to the axis of other with optional offset
+    static func alignLeading(greaterThanOrEqualTo axis: AxisX, of other: Anchor, withOffset offset: CGFloat = 0.0) -> Constraint {
+        return align(.leading, greaterThanOrEqualTo: axis, ofView: other, offset: offset)
+    }
 
     /// Matches the trailing to other with optional offset
     static func matchTrailingTo(_ other: Anchor, withOffset offset: CGFloat = 0.0) -> Constraint {
@@ -185,6 +215,16 @@ public extension Constraint {
     /// Aligns the trailing to the axis of other with optional offset
     static func alignTrailing(to axis: AxisX, of other: Anchor, withOffset offset: CGFloat = 0.0) -> Constraint {
         return align(.trailing, to: axis, ofView: other, offset: offset)
+    }
+    
+    /// Aligns the trailing less than or equal to the axis of other with optional offset
+    static func alignTrailing(lessThanOrEqualTo axis: AxisX, of other: Anchor, withOffset offset: CGFloat = 0.0) -> Constraint {
+        return align(.trailing, lessThanOrEqualTo: axis, ofView: other, offset: offset)
+    }
+    
+    /// Aligns the greater less than or equal to the axis of other with optional offset
+    static func alignTrailing(greaterThanOrEqualTo axis: AxisX, of other: Anchor, withOffset offset: CGFloat = 0.0) -> Constraint {
+        return align(.trailing, greaterThanOrEqualTo: axis, ofView: other, offset: offset)
     }
 
     /// Matches the centerX to other with optional offset
@@ -242,6 +282,62 @@ private extension Constraint {
             let fromAnchor = from.layoutAnchor(forAnchorable: anchor)
             let toAnchor = to.layoutAnchor(forAnchorable: other)
             return fromAnchor.constraint(equalTo: toAnchor, constant: offset)
+        })
+    }
+    
+    /// Helper to simplify horizontal alignment constraints
+    /// - Parameters:
+    ///   - from The X axis of the constraint we're modifying
+    ///   - lessThanOrEqualTo The X axis to apply the constraint less than or equal to
+    ///   - other: The Anchor we're applying these constraints relative to
+    ///   - offset: The optional offset to use for the constraint
+    static func align(_ from: AxisX, lessThanOrEqualTo: AxisX, ofView other: Anchor, offset: CGFloat = 0.0) -> Constraint {
+        return Constraint(maker: { (anchor) -> NSLayoutConstraint in
+            let fromAnchor = from.layoutAnchor(forAnchorable: anchor)
+            let lessThanOrEqualToAnchor = lessThanOrEqualTo.layoutAnchor(forAnchorable: other)
+            return fromAnchor.constraint(lessThanOrEqualTo: lessThanOrEqualToAnchor, constant: offset)
+        })
+    }
+    
+    /// Helper to simplify horizontal alignment constraints
+    /// - Parameters:
+    ///   - from The X axis of the constraint we're modifying
+    ///   - greaterThanOrEqualTo The X axis to apply the constraint greater than or equal to
+    ///   - other: The Anchor we're applying these constraints relative to
+    ///   - offset: The optional offset to use for the constraint
+    static func align(_ from: AxisX, greaterThanOrEqualTo: AxisX, ofView other: Anchor, offset: CGFloat = 0.0) -> Constraint {
+        return Constraint(maker: { (anchor) -> NSLayoutConstraint in
+            let fromAnchor = from.layoutAnchor(forAnchorable: anchor)
+            let greaterThanOrEqualToAnchor = greaterThanOrEqualTo.layoutAnchor(forAnchorable: other)
+            return fromAnchor.constraint(greaterThanOrEqualTo: greaterThanOrEqualToAnchor, constant: offset)
+        })
+    }
+    
+    /// Helper to simplify vertical alignment constraints
+    /// - Parameters:
+    ///   - from The Y axis of the constraint we're modifying
+    ///   - lessThanOrEqualTo The Y axis to apply the constraint less than or equal to
+    ///   - other: The Anchor we're applying these constraints relative to
+    ///   - offset: The optional offset to use for the constraint
+    static func align(_ from: AxisY, lessThanOrEqualTo: AxisY, ofView other: Anchor, offset: CGFloat = 0.0) -> Constraint {
+        return Constraint(maker: { (anchor) -> NSLayoutConstraint in
+            let fromAnchor = from.layoutAnchor(forAnchorable: anchor)
+            let lessThanOrEqualToAnchor = lessThanOrEqualTo.layoutAnchor(forAnchorable: other)
+            return fromAnchor.constraint(lessThanOrEqualTo: lessThanOrEqualToAnchor, constant: offset)
+        })
+    }
+    
+    /// Helper to simplify vertical alignment constraints
+    /// - Parameters:
+    ///   - from The Y axis of the constraint we're modifying
+    ///   - greaterThanOrEqualTo The Y axis to apply the constraint greater than or equal to
+    ///   - other: The Anchor we're applying these constraints relative to
+    ///   - offset: The optional offset to use for the constraint
+    static func align(_ from: AxisY, greaterThanOrEqualTo: AxisY, ofView other: Anchor, offset: CGFloat = 0.0) -> Constraint {
+        return Constraint(maker: { (anchor) -> NSLayoutConstraint in
+            let fromAnchor = from.layoutAnchor(forAnchorable: anchor)
+            let greaterThanOrEqualToAnchor = greaterThanOrEqualTo.layoutAnchor(forAnchorable: other)
+            return fromAnchor.constraint(greaterThanOrEqualTo: greaterThanOrEqualToAnchor, constant: offset)
         })
     }
 }
